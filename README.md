@@ -1,0 +1,3 @@
+# nvim
+
+flutter, python
