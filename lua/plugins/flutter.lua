@@ -13,6 +13,9 @@ return {
                 vim.bo.shiftwidth = 2
                 vim.bo.softtabstop = 2
                 vim.bo.expandtab = true
+                -- Replace
+                local opts = { noremap = true, silent = true, buffer = true }
+                vim.keymap.set("n", "R", "<cmd>FlutterRename<CR>", opts)
             end,
         })
 
@@ -21,7 +24,7 @@ return {
                 settings = {
                     dart = {
                         renameFilesWithClasses = "always",
-                        updateImportsOnRename = false,
+                        updateImportsOnRename = true,
                     },
                 },
             },
